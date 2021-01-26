@@ -2,7 +2,7 @@
 <html>
 <head lang="uk">
     <meta charset="UTF-8">
-    <title>My Page</title>
+    <title>Just buy it, you have 300$</title>
     
 
     <link rel="stylesheet" type="text/css" href="main.css" />
@@ -11,7 +11,8 @@
 <div class="bl-background">
     <div class="bl-list">
         <div class="bl-row">
-            <input class="area" placeholder="Назва товару..."></input><button class="add"> <b>Додати</b> 
+            <input class="area" placeholder="Назва товару..."></input><button
+             class="add" data-tooltip="add"> <span>Додати </span> 
                 </button>
         </div>
         <div class="bl-row">
@@ -19,13 +20,13 @@
                 Огірки
             </span>
             <div class="bl-count">
-                <button class="bl-minus" disabled>-</button>
+                <button class="bl-minus" disabled style="cursor: default;">-</button>
                 <span class="bl-label">1</span>
-                <button class="bl-plus">+</button>
+                <button class="bl-plus" data-tooltip="increase">+</button>
             </div>
             <div class="bl-buttons">
-                <button class="bought">Куплене</button>
-                <button class="delete"><b>x</b></button> 
+                <button class="bought" data-tooltip="buy">Куплене</button>
+                <button class="delete" data-tooltip="delete"><b>x</b></button> 
             </div>
         </div>
         <div class="bl-row">
@@ -34,14 +35,15 @@
         </div>
             <div class="bl-count">
                 <div class="count"> 
-                    <button class="bl-minus">-</button>
+                    <button class="bl-minus" data-tooltip="reduce">
+                        -</button>
                     <span class="bl-label">3</span>
-                    <button class="bl-plus">+</button>
+                    <button class="bl-plus" data-tooltip="increase">+</button>
                 </div>
             </div>
             <div class="bl-buttons">
-                <button class="bought">Куплене</button>
-                <button class="delete"><b>x</b></button> 
+                <button class="bought" data-tooltip="buy">Куплене</button>
+                <button class="delete" data-tooltip="delete"><b>x</b></button> 
             </div>
         </div>
         <div class="bl-row">
@@ -49,13 +51,13 @@
                 Шимер
             </span>
             <div class="bl-count">
-                <button class="bl-minus">-</button>
+                <button class="bl-minus" data-tooltip="reduce">-</button>
                 <span class="bl-label">9</span>
-                <button class="bl-plus">+</button>
+                <button class="bl-plus" data-tooltip="increase">+</button>
             </div>
             <div class="bl-buttons">
-                <button class="bought">Куплене</button>
-                <button class="delete"><b>x</b></button> 
+                <button class="bought" data-tooltip="buy">Куплене</button>
+                <button class="delete" data-tooltip="delete"><b>x</b></button> 
             </div>
         </div>
     </div>
@@ -70,6 +72,11 @@
         </div>
         <div class="bl-title"><h3>Куплено</h3></div>
     </div>
+</div>
+
+<div class="badge">
+    <div class="badge-text1"><b>Buy List</b></div>
+    <div class="badge-text2"><span>Created by:</span> <span style="font-size: 10px;"> Yaroshepta B.</span></div>
 </div>
 
 </body>

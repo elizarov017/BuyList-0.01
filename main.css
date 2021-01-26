@@ -1,6 +1,7 @@
 body {
     background-color: #DADADA;
-    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-family: 'Helvetica Neue',Helvetica;
+    text-align: center;
 }
 
 body, html {
@@ -9,18 +10,17 @@ body, html {
 
 .bl-background {
     background: #DADADA;
-    margin-top: 15%;
-    width: 1127px;
-    margin-left: auto!important;
-    margin-right: auto!important;
-    box-sizing:content-box;
+    margin-top: 100px;
+    width: 1300px;
 
+    text-align: center;
+    display: inline-block;
 }
 
 .bl-list {
     background: white;
     margin: 10px;
-    width: 65%;
+    width: 55%;
     display: inline-block;
     vertical-align: top;
     border-radius: 0.285714rem;
@@ -32,11 +32,13 @@ body, html {
     margin: 10px;
     padding: 15px;
     padding-top: 4px;
-    width: 20%;
+    width: 300px;
     display: inline-block;
     vertical-align: top;
     border-radius: 0.285714rem;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: left;
+    box-sizing: border-box
 }
 
 /*Кнопки*/
@@ -47,41 +49,7 @@ body, html {
     padding: 5px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 0.2rem;
-}
-
-
-
-.bl-plus {
-    background: #04a613;
-    color: aliceblue;
     cursor: default;
-    border-radius: 50%;
-    font-size: 20px;
-    border: none;
-}
-
-.bl-minus {
-    background: #dd0606;
-    color: aliceblue;
-    cursor: default;
-    border-radius: 50%;
-    font-size: 20px;
-    padding-left: 8px;
-    padding-right: 8px;
-    text-align: center;
-    border: none;
-}
-
-
-.delete {
-    background: #dd0606;
-    color: aliceblue;
-    border: none;
-    border-radius: 0.285714rem;
-    font-size: 20px;
-    padding: 8px 12px;
-    padding-top: 4px;
-    padding-bottom: 8px;
 }
 
 .bl-title {
@@ -91,23 +59,8 @@ body, html {
     
 }
 
-.bl-buttons {
-    display: inline-block;
-    padding: 14px;
-    padding-left: 6%;
-    border: none;
-    border-radius: 0.285714rem;
-}
-
-.bl-product {
-    width: 25%;
-    padding: 14px;
-    display: inline-block;
-    font-size: 16px;
-}
-
 .area {
-    width: 76%;
+    width: 544px;
     margin: 16px;
     margin-left: 14px;
     margin-right: 0px;
@@ -137,18 +90,75 @@ left: 0px;
 right: 0px;
 width: 1000px;}
 
-.bl-count {
+.bl-product {
     width: 30%;
-    margin: 14px;
-    padding-left: 10%;
+    /* width: 250px; */
+    padding: 14px;
+    padding-left: 16px;
     display: inline-block;
+    font-size: 16px;
+    text-align: left;
+    box-sizing: border-box
+}
+
+.bl-count {
+    width: 35%;
+    /* width: 150px; */
+    padding: 14px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box
+}
+
+.bl-buttons {
+    width: 33%;
+    display: inline-block;
+    padding: 14px;
+    padding-left: 0%;
+    border: none;
+    border-radius: 0.285714rem;
+    text-align: right;
+    box-sizing: border-box
+}
+
+.bl-plus {
+    background: #04a613;
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    border: none;
+}
+
+.bl-minus {
+    background: #dd0606;
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    border: none;
+}
+
+.delete {
+    background: #dd0606;
+    color: aliceblue;
+    border: none;
+    border-radius: 0.285714rem;
+    font-size: 20px;
+    padding: 8px 12px;
+    padding-top: 4px;
+    padding-bottom: 8px;
 }
 
 .bl-row {
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color:lightgray;
-    
+    text-align: left;
+    box-sizing: border-box
 }
 
 .bought {
@@ -156,19 +166,25 @@ width: 1000px;}
     padding: 10px 20px;
     border-radius: .28571429rem;
     border: none;
+    box-sizing: border-box
 }
 
 .add {
-    margin-right: 10px;
+    width: 108px;
+    text-align: center;
+    transition: all 0.5s;
     font-size: 16px;
-    padding: 15px 29px;
+    padding: 15px 3.5%;
+    padding-right: 25px;
     background-color: #2185D0;
     color: ivory;
     border: none;
     border-top-right-radius: .28571429rem;
     border-bottom-right-radius: .28571429rem;
 }
+
 .label {
+    cursor: default;
     background: #dfdfdf;
     color: black;
     font-size: 10px;
@@ -197,6 +213,8 @@ width: 1000px;}
 
 button {
     outline: none;
+    cursor: pointer;
+    
 }
 
 button:active {
@@ -205,4 +223,151 @@ button:active {
 
 .bl-minus:disabled {
     background: #fca4a4;
+}
+
+.badge {
+    cursor: default;
+    position: fixed;
+    background-color: #b74de0;
+    border-top-right-radius: .8rem;
+    border-top-left-radius: .8rem;
+    width: 90px;
+    height: 110px;
+    left: 10%;
+    bottom: -75px;
+    transition:	.7s	ease;
+    font-family: sans-serif;
+}
+
+.badge:hover {
+    bottom: -50px;
+    background-color: #854de0;
+}
+
+
+.add span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .add span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -5px;
+    transition: 0.5s;
+  }
+  
+  .add:hover span {
+    padding-right: 15px;
+  }
+  
+  .add:hover span:after {
+    opacity: 1;
+    right: 2px;
+  }
+
+  .badge-text1 {
+    text-align: middle;
+    padding-top: 12px;
+    color: aliceblue;
+  }
+  .badge-text2 {
+    text-align: left;
+    padding-top: 6px; 
+    padding-left: 17px; 
+    color: aliceblue; 
+    font-size: 8px;
+  }
+
+  [data-tooltip] {
+    position: relative; 
+   
+   }
+   [data-tooltip]::after {
+    font-size: 10px;
+    content: attr(data-tooltip); 
+    position: absolute; 
+    height: 1px;
+    width: attr(width);
+    bottom: 105%;
+    left:50%;
+    padding: 0.625em;
+    transform:translateX(-50%);
+    border-radius: 1.25em;
+    background: purple; 
+    color: white; 
+    pointer-events: none; 
+    opacity: 0; 
+    transition: 1s; 
+   } 
+   [data-tooltip]:hover::after {
+    height:1.25em;
+    opacity: 1; 
+   }
+
+@media print {
+    .badge {
+        border: solid 2px rgb(0, 0, 0);
+        height: 40px;
+        bottom: 0px;
+    }
+
+    .badge-text1  {
+        display: none;
+    }
+
+    .badge-text2 {
+        color: black;
+        padding-top: 10px;
+    }
+    
+}
+
+@media(max-width: 1200px) {
+    .bl-background {
+        width: 1000px
+    }
+    
+    .area {
+        width: 380px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .bl-background {
+        width: 850px
+    }
+     
+    .area {
+        width: 300px;
+    }
+
+    .bl-bought {
+        width: 190px;
+    }
+}
+
+@media(max-width: 800px) {
+    .bl-background {
+        width: 500px;
+        margin-left: 0px;
+        margin-right: 20px;
+        margin-top: 70px;
+    }
+     
+    .area {
+        width: 332px;
+    }
+    
+    .bl-list {
+        width: 500px;
+    }
+    .bl-bought {
+        width: 500px;
+    }
+
 }
