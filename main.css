@@ -2,6 +2,7 @@ body {
     background-color: #DADADA;
     font-family: 'Helvetica Neue',Helvetica;
     text-align: center;
+    overflow-x:hidden;
 }
 
 body, html {
@@ -12,9 +13,9 @@ body, html {
     background: #DADADA;
     margin-top: 100px;
     width: 1300px;
-
     text-align: center;
     display: inline-block;
+    transition:	all	0.5s ease;
 }
 
 .bl-list {
@@ -38,7 +39,8 @@ body, html {
     border-radius: 0.285714rem;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     text-align: left;
-    box-sizing: border-box
+    box-sizing: border-box;
+    transition:	all	0.5s ease;
 }
 
 /*Кнопки*/
@@ -74,8 +76,9 @@ body, html {
     border-bottom-right-radius: 0rem;
     border-top-right-radius: 0rem;
     box-shadow: 0 0 0 0 transparent inset;
-    transition: color .1s ease,border-color .1s ease;
+    outline: none;
     display: inline-block;
+    transition:	all	0.5s ease;
 }
 
 .count {
@@ -98,7 +101,8 @@ width: 1000px;}
     display: inline-block;
     font-size: 16px;
     text-align: left;
-    box-sizing: border-box
+    box-sizing: border-box;
+    transition:	all	0.5s ease;
 }
 
 .bl-count {
@@ -154,6 +158,22 @@ width: 1000px;}
 }
 
 .bl-row {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color:lightgray;
+    text-align: left;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.row {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color:lightgray;
+    text-align: left;
+}
+
+.input-row {
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color:lightgray;
@@ -235,15 +255,21 @@ button:active {
     height: 110px;
     left: 10%;
     bottom: -75px;
-    transition:	.7s	ease;
     font-family: sans-serif;
+    
 }
+
+
 
 .badge:hover {
     bottom: -50px;
     background-color: #854de0;
+    transition:	.7s	ease;
 }
 
+.badge {
+    transition:	.7s	ease;
+}
 
 .add span {
     cursor: pointer;
@@ -309,6 +335,84 @@ button:active {
     opacity: 1; 
    }
 
+@media(max-width: 1320px) {
+    .bl-background {
+        transition:	all	0.5s ease;
+        width: 1000px;
+    }
+    
+    .area {
+        width: 380px;
+        transition:	all	0.5s ease;
+    }
+}
+
+@media(max-width: 1050px) {
+    .bl-background {
+        width: 850px;
+        transition:	all	0.4s ease;
+    }
+     
+    .area {
+        width: 300px;
+        transition:	all	0.4s ease;
+    }
+
+    .bl-bought {
+        width: 190px;
+    }
+
+    .bl-list {
+        transition:	all	0.8s ease;
+    }
+}
+
+@media(max-width: 900px) {
+    .bl-background {
+        transition:	all	0.5s ease;
+        width: 500px;
+        margin-left: 0px;
+        margin-right: 20px;
+        margin-top: 70px;
+    }
+     
+    .area {
+        width: 332px;
+        transition:	all	0.2s ease;
+    }
+    
+    .bl-list {
+        transition:	all	0.2s ease;
+        width: 500px;
+    }
+    .bl-bought {
+        width: 500px;
+    }
+
+
+}
+
+@media(max-width: 600px) {
+    body {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .bl-background {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .bl-list {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .bl-bought {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+
 @media print {
     .badge {
         border: solid 2px rgb(0, 0, 0);
@@ -324,21 +428,8 @@ button:active {
         color: black;
         padding-top: 10px;
     }
-    
-}
 
-@media(max-width: 1200px) {
-    .bl-background {
-        width: 1000px
-    }
-    
-    .area {
-        width: 380px;
-    }
-}
-
-@media(max-width: 1000px) {
-    .bl-background {
+     .bl-background {
         width: 850px
     }
      
@@ -349,25 +440,4 @@ button:active {
     .bl-bought {
         width: 190px;
     }
-}
-
-@media(max-width: 800px) {
-    .bl-background {
-        width: 500px;
-        margin-left: 0px;
-        margin-right: 20px;
-        margin-top: 70px;
-    }
-     
-    .area {
-        width: 332px;
-    }
-    
-    .bl-list {
-        width: 500px;
-    }
-    .bl-bought {
-        width: 500px;
-    }
-
 }

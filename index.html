@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <title>Just buy it, you have 300$</title>
     
-
+    <script	type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js">	</script>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
 <div class="bl-background">
     <div class="bl-list">
-        <div class="bl-row">
-            <input class="area" placeholder="Назва товару..."></input><button
+        <div class="input-row">
+            <input class="area" input="" placeholder="Назва товару..."></input><button
              class="add" data-tooltip="add"> <span>Додати </span> 
                 </button>
         </div>
-        <div class="bl-row">
+        <div class="itemList">
+        <div class="row">
+            <div class="bl-row">
+            <div style="display: inline;">
             <span class="bl-product">
                 Огірки
             </span>
+        </div>
             <div class="bl-count">
                 <button class="bl-minus" disabled style="cursor: default;">-</button>
                 <span class="bl-label">1</span>
@@ -28,6 +32,7 @@
                 <button class="bought" data-tooltip="buy">Куплене</button>
                 <button class="delete" data-tooltip="delete"><b>x</b></button> 
             </div>
+        </div>
         </div>
         <div class="bl-row">
             <div class="bl-product"> 
@@ -61,6 +66,7 @@
             </div>
         </div>
     </div>
+    </div>
     <div class="bl-bought">
         <div class="bl-title"><h3>Залишилося</h3></div>
         <div class="bl-title">
@@ -78,6 +84,6 @@
     <div class="badge-text1"><b>Buy List</b></div>
     <div class="badge-text2"><span>Created by:</span> <span style="font-size: 10px;"> Yaroshepta B.</span></div>
 </div>
-
+<script	src="main.js"></script>
 </body>
 </html>
