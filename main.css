@@ -167,16 +167,10 @@ width: 1000px;}
 }
 
 .row {
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color:lightgray;
-    text-align: left;
+    display: none;
 }
 
 .input-row {
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color:lightgray;
     text-align: left;
     box-sizing: border-box
 }

@@ -1,4 +1,10 @@
 $(function() {
+    $(window).load(function() {
+        addItem("Огірки");
+        addItem("Помідори");
+        addItem("Шимер");
+    });
+
     $(".add").click(function() {
         let title = $(".area").val();
         if (title) addItem(title);
@@ -12,7 +18,6 @@ function addItem(title)	{
     let node = $(itemTemplate);
     node.find(".bl-product").text(title);	
 
-    // node.addClass("row");
     node.find(".delete").click(function(){
     node.remove();
     });
