@@ -61,6 +61,22 @@ body, html {
     
 }
 
+.buy-list {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color:lightgray;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.bought-list {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color:lightgray;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
 .area {
     width: 544px;
     margin: 16px;
@@ -148,6 +164,11 @@ width: 1000px;}
     border: none;
 }
 
+.bl-minus:disabled {
+    background: #fca4a4;
+    cursor: default;
+}
+
 .delete {
     background: #dd0606;
     color: aliceblue;
@@ -173,6 +194,10 @@ width: 1000px;}
     box-sizing: border-box;
     /* transition: 0.5s; */
     /* overflow: hidden; */
+}
+
+.one-badge {
+    display: none;
 }
 
 .row-start {
@@ -214,8 +239,8 @@ width: 1000px;}
     cursor: default;
     background: #dfdfdf;
     color: black;
-    font-size: 10px;
-    margin: 15px;
+    font-size: 12px;
+    margin-bottom: 4px;
     margin-left: 0px;
     margin-right: 5px;
     padding: 5px;
@@ -223,12 +248,13 @@ width: 1000px;}
     border-radius: 0.2rem;
     border: none;
     display: inline-block;
+    text-align: center;
 }
 
 .labela {
     background: #f86300;
     color: rgb(255, 255, 255);
-    font-size: 7px;
+    font-size: 10px;
     margin-left: 0px;
     padding: 3px 5px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -236,6 +262,11 @@ width: 1000px;}
     border: none;
     align-content: center;
     display: inline-block;
+    box-sizing: border-box;
+    min-width: 8px;
+    min-height: 8px;
+    text-align: center;
+    /* border-radius: 500rem; */
 }
 
 button {
@@ -248,9 +279,7 @@ button:active {
     transform: translateY(1px);
   }
 
-.bl-minus:disabled {
-    background: #fca4a4;
-}
+
 
 .badge {
     cursor: default;
