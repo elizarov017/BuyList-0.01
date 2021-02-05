@@ -31,7 +31,6 @@ body, html {
 .bl-bought {
     background: white;
     margin: 10px;
-    padding: 15px;
     padding-top: 4px;
     width: 300px;
     display: inline-block;
@@ -43,7 +42,6 @@ body, html {
     transition:	all	0.5s ease;
 }
 
-/*Кнопки*/
 
 .bl-label {
     background: #cdcbcb;
@@ -58,7 +56,6 @@ body, html {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color:lightgray;
-    
 }
 
 .buy-list {
@@ -67,6 +64,7 @@ body, html {
     border-bottom-color:lightgray;
     box-sizing: border-box;
     padding: 10px;
+
 }
 
 .bought-list {
@@ -91,9 +89,45 @@ body, html {
     border-radius: .28571429rem;
     border-bottom-right-radius: 0rem;
     border-top-right-radius: 0rem;
-    box-shadow: 0 0 0 0 transparent inset;
     outline: none;
+    /* outline-color: rgb(94, 123, 252);
+    outline-width: 1px;
+    outline-offset: -1.05px; */
+    
     display: inline-block;
+    transition:	all	0.5s ease;
+}
+
+.ch-name {
+    width: 26%;
+    margin: 14.4px;
+    margin-top: 16px;
+    margin-left: 14px;
+    padding: 8px;
+    padding-right: 20px;
+    /* margin-right: 100.3px; */
+    font-size: 14px;
+    align-content: center;
+    border: 1px solid rgba(34,36,38,.15);
+    color: rgba(0,0,0,.87);
+    border-radius: .28571429rem;
+    outline-color: rgb(94, 123, 252);
+    /* outline-style: inset; */
+    /* outline-width: thin; */
+    display: inline-block;
+    transition:	all	0.5s ease;
+}
+
+.bl-product {
+    width: 30%;
+    margin: 14px;
+    /* margin-bottom: 1px; */
+    margin-top: 23px;
+    margin-left: 16px;
+    display: inline-block;
+    font-size: 16px;
+    text-align: left;
+    box-sizing: border-box;
     transition:	all	0.5s ease;
 }
 
@@ -103,40 +137,22 @@ body, html {
     margin-right: auto;
 }
 
-.center
-{position: fixed;
-left: 0px;
-right: 0px;
-width: 1000px;}
-
-.bl-product {
-    width: 30%;
-    /* width: 250px; */
-    padding: 14px;
-    padding-left: 16px;
-    display: inline-block;
-    font-size: 16px;
-    text-align: left;
-    box-sizing: border-box;
-    transition:	all	0.5s ease;
-}
-
 .bl-count {
     width: 35%;
     height: 0px;
-    /* width: 150px; */
-    padding: 14px;
+    margin: 14px;
+    margin-left: 0px;
+    margin-right: 0px;
     display: inline-block;
     text-align: center;
     box-sizing: border-box
 }
 
 .bl-buttons {
-    /* height: 0%; */
-    width: 33%;
+    width: 27%;
     display: inline-block;
-    padding: 14px;
-    padding-left: 0%;
+    margin: 14px;
+    margin-left: 0px;
     border: none;
     border-radius: 0.285714rem;
     text-align: right;
@@ -158,8 +174,8 @@ width: 1000px;}
     cursor: pointer;
     border-radius: 50%;
     font-size: 20px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 8.5px;
+    padding-right: 8.5px;
     text-align: center;
     border: none;
 }
@@ -180,11 +196,6 @@ width: 1000px;}
     padding-bottom: 8px;
 }
 
-.kek {
-    /* height: 0px; */
-    transition: 0.5s;
-    transform: scaleY(1000%);
-}
 .bl-row {
     height: 0px;
     border-top-width: 1px;
@@ -192,8 +203,6 @@ width: 1000px;}
     border-top-color:lightgray;
     text-align: left;
     box-sizing: border-box;
-    /* transition: 0.5s; */
-    /* overflow: hidden; */
 }
 
 .one-badge {
@@ -221,6 +230,16 @@ width: 1000px;}
     box-sizing: border-box
 }
 
+.n-bought {
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: .28571429rem;
+    border: none;
+    box-sizing: border-box
+}
+
+
+
 .add {
     width: 108px;
     text-align: center;
@@ -240,7 +259,7 @@ width: 1000px;}
     background: #dfdfdf;
     color: black;
     font-size: 12px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
     margin-left: 0px;
     margin-right: 5px;
     padding: 5px;
@@ -371,13 +390,19 @@ button:active {
    [data-tooltip]:hover::after {
     height:1.25em;
     opacity: 1; 
-    /* overflow:inherit; */
-    
    }
 
-   .ovr-hid {
-        overflow: hidden;
-   }
+.ovr-hid {
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
 
 @media(max-width: 1320px) {
     .bl-background {
@@ -409,6 +434,18 @@ button:active {
     .bl-list {
         transition:	all	0.8s ease;
     }
+
+    .bl-product {
+        width: 80px;
+    }
+
+    .ch-name {
+        width: 107.4px;
+    }
+
+    .bl-count {
+
+    }
 }
 
 @media(max-width: 900px) {
@@ -428,9 +465,24 @@ button:active {
     .bl-list {
         transition:	all	0.2s ease;
         width: 500px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .bl-bought {
         width: 500px;
+    }
+
+    .bl-bought {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .bl-product {
+        width: 136px;
+    }
+
+    .ch-name {
+        width: 107.4px;
     }
 
 
@@ -453,6 +505,14 @@ button:active {
     .bl-bought {
         margin-left: 0px;
         margin-right: 0px;
+    }
+
+    .bl-product {
+        width: 136px;
+    }
+
+    .ch-name {
+        width: 107.4px;
     }
 }
 

@@ -13,7 +13,7 @@
 <div class="bl-background">
     <div class="bl-list">
         <div class="input-row">
-            <input class="area" input="" placeholder="Назва товару..."></input><button
+            <input class="area" spellcheck="false" input="" placeholder="Назва товару..."></input><button
              class="add" data-tooltip="add"> <span>Додати </span> 
                 </button>
         </div><div class="itemList">
@@ -21,8 +21,8 @@
             <div class="bl-row">
                 <div id="kek">
             <div style="display: inline;">
-            <span class="bl-product">
-            </span>
+            <span class="bl-product"> </span>
+            <input class="ch-name hidden" spellcheck="false"></input>
         </div>
             <div class="bl-count">
                 <button class="bl-minus" disabled data-tooltip="reduce">-</button>
@@ -31,22 +31,24 @@
             </div>
             <div class="bl-buttons">
                 <button class="bought" data-tooltip="buy">Куплене</button>
+                <button class="n-bought hidden" data-tooltip="buy">Не куплене</button>
                 <button class="delete" data-tooltip="delete"><b>x</b></button> 
-            </div></div>
+            </div>
+        </div>
         </div>
         </div>
         
     </div>
     </div>
     <div class="bl-bought">
-        <div class="bl-title"><h3>Залишилося</h3></div>
+        <div class="bl-title"><h3 style="margin-left: 10px;">Залишилося</h3></div>
         <div class="buy-list">
             <div class="one-badge">
             <div class="label"><span class="b-name"> Огірки </span> <span class="labela">1</span></div>
             </div>
         </div>
-        <div class="bl-title"><h3>Куплено</h3></div>
-        <div class="bought-list"><div class="label"><span > Шимер <span class="labela">9</span></span></div></div>
+        <div class="bl-title"><h3 style="margin-left: 10px;">Куплено</h3></div>
+        <div class="bought-list"></div>
     </div>
 </div>
 
