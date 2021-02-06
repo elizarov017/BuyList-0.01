@@ -89,39 +89,33 @@ body, html {
     border-radius: .28571429rem;
     border-bottom-right-radius: 0rem;
     border-top-right-radius: 0rem;
-    outline: none;
-    /* outline-color: rgb(94, 123, 252);
-    outline-width: 1px;
-    outline-offset: -1.05px; */
-    
+    outline: none;    
     display: inline-block;
     transition:	all	0.5s ease;
 }
 
 .ch-name {
-    width: 26%;
+    width: 26.05%;
     margin: 14.4px;
+    margin-right: 44.5px;
     margin-top: 16px;
     margin-left: 14px;
     padding: 8px;
     padding-right: 20px;
-    /* margin-right: 100.3px; */
     font-size: 14px;
     align-content: center;
     border: 1px solid rgba(34,36,38,.15);
     color: rgba(0,0,0,.87);
     border-radius: .28571429rem;
     outline-color: rgb(94, 123, 252);
-    /* outline-style: inset; */
-    /* outline-width: thin; */
     display: inline-block;
     transition:	all	0.5s ease;
+    box-sizing: border-box;
 }
 
 .bl-product {
     width: 30%;
     margin: 14px;
-    /* margin-bottom: 1px; */
     margin-top: 23px;
     margin-left: 16px;
     display: inline-block;
@@ -145,7 +139,8 @@ body, html {
     margin-right: 0px;
     display: inline-block;
     text-align: center;
-    box-sizing: border-box
+    box-sizing: border-box;
+    transition:	all	0.5s ease;
 }
 
 .bl-buttons {
@@ -156,7 +151,8 @@ body, html {
     border: none;
     border-radius: 0.285714rem;
     text-align: right;
-    box-sizing: border-box
+    box-sizing: border-box;
+    transition:	all	0.5s ease;
 }
 
 .bl-plus {
@@ -186,14 +182,17 @@ body, html {
 }
 
 .delete {
+    width: 36px;
+    height: 36px;
     background: #dd0606;
     color: aliceblue;
     border: none;
     border-radius: 0.285714rem;
     font-size: 20px;
     padding: 8px 12px;
-    padding-top: 4px;
-    padding-bottom: 8px;
+    padding-top: 1.5px;
+    padding-bottom: 4px;
+    text-align: center;
 }
 
 .bl-row {
@@ -223,11 +222,14 @@ body, html {
 }
 
 .bought {
+    width: 90px;
+    height: 36px;
     font-size: 14px;
     padding: 10px 20px;
     border-radius: .28571429rem;
     border: none;
-    box-sizing: border-box
+    box-sizing: border-box;
+    
 }
 
 .n-bought {
@@ -285,7 +287,6 @@ body, html {
     min-width: 8px;
     min-height: 8px;
     text-align: center;
-    /* border-radius: 500rem; */
 }
 
 button {
@@ -311,10 +312,7 @@ button:active {
     left: 10%;
     bottom: -75px;
     font-family: sans-serif;
-    
 }
-
-
 
 .badge:hover {
     bottom: -50px;
@@ -369,7 +367,7 @@ button:active {
    
    }
    [data-tooltip]::after {
-    font-size: 12px;
+    font-size: 10px;
     content: attr(data-tooltip); 
     position: absolute; 
     height: 1px;
@@ -383,13 +381,12 @@ button:active {
     color: white; 
     pointer-events: none; 
     opacity: 0; 
-    transition: 1s; 
-    
-
+    transition: 0.5s;
    } 
    [data-tooltip]:hover::after {
     height:1.25em;
     opacity: 1; 
+    transition: 0.5s;
    }
 
 .ovr-hid {
@@ -414,6 +411,14 @@ button:active {
         width: 380px;
         transition:	all	0.5s ease;
     }
+
+    .bl-product {
+        width: 27.6%;
+    }
+
+    .ch-name {
+        width: 123.3px;
+    }
 }
 
 @media(max-width: 1050px) {
@@ -436,19 +441,23 @@ button:active {
     }
 
     .bl-product {
-        width: 80px;
+        width: 30%;
     }
 
     .ch-name {
-        width: 107.4px;
+        width: 111.7px;
     }
 
     .bl-count {
-
+        width: 22%;
+    }
+    
+    .bl-buttons {
+        width: 36.3%;
     }
 }
 
-@media(max-width: 900px) {
+@media(max-width: 850px) {
     .bl-background {
         transition:	all	0.5s ease;
         width: 500px;
@@ -470,22 +479,21 @@ button:active {
     }
     .bl-bought {
         width: 500px;
-    }
-
-    .bl-bought {
         margin-left: 0px;
         margin-right: 0px;
     }
-
+    
     .bl-product {
         width: 136px;
     }
 
-    .ch-name {
-        width: 107.4px;
+    .bl-product {
+        width: 30.7%;
     }
 
-
+    .ch-name {
+        width: 25%;
+    }
 }
 
 @media(max-width: 600px) {
@@ -508,11 +516,11 @@ button:active {
     }
 
     .bl-product {
-        width: 136px;
+        width: 30.7%;
     }
 
     .ch-name {
-        width: 107.4px;
+        width: 25%;
     }
 }
 
